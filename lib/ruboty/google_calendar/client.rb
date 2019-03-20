@@ -29,9 +29,11 @@ module Ruboty
       end
 
       def create_event(calendar_id: nil, summary: nil, start_date: nil, end_date: nil)
+        p "calendar_id: #{calendar_id}"
         return unless calendar_id
+        p "start_date: #{start_date}"
         return unless start_date
-
+        p "summary: #{summary}"
         start_date = Date.parse(start_date)
         end_date = if end_date
                      Date.parse(end_date) + 1
